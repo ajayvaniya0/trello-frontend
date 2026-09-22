@@ -1,4 +1,4 @@
-export function Dashbaord() {
+export function Dashboard() {
     return <div>
         Board Component
     </div>
