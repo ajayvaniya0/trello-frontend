@@ -20,7 +20,7 @@ export function AuthCredentials() {
                 <Input type="password" placeholder="password"/>
             </Center>
             <Center>
-                <Button>Signup</Button>
+                <Button rightIcon={<img style={{height: 20}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg8osQDK0Kmjxoan7eh04xI0Ya0KLVhnA3UsydJwtLNQ&s"/>}>Signup</Button>
             </Center>
         </div>
     </div>
