@@ -1,18 +1,33 @@
 import { Appbar } from "../components/Appbar";
+import { Card } from "../components/Card";
 
 export function Board() {
     return <div>
         <Appbar />
-        <div style={{display: "flex"}}>
-            <div style={{flex: 1, borderRight: "1px dotted black", minHeight: "100vh"}}>
-                    hi
+        <div style={{display: "flex", padding: 30}}>
+            <div style={{flex: 1, borderRight: "1px dotted black", minHeight: "80vh"}}>
+                    <Card 
+                        title={"Node to bun migration"} 
+                        description={"Move website from node.js to bun. We've been trying but not working out.."} 
+                    />
+                    <Card 
+                        title={"Node to bun migration"} 
+                        description={"Move website from node.js to bun. We've been trying but not working out.."} 
+                    />
+                    <Card 
+                        title={"Node to bun migration"} 
+                        description={"Move website from node.js to bun. We've been trying but not working out.."} 
+                    />
                 </div>
-                <div style={{flex: 1, borderRight: "1px dotted black", minHeight: "100vh"}}>
-                    hi
+                <div style={{flex: 1, borderRight: "1px dotted black", minHeight: "80vh"}}>
+                    <Card 
+                        title={"Node to bun migration"} 
+                        description={"Move website from node.js to bun. We've been trying but not working out.."} 
+                    />
                 </div>
                 <div style={{flex: 1, minHeight: "100vh"}}>
-                    hi
+                    
                 </div>
             </div>
         </div>
-}
+}   
