@@ -1,11 +1,23 @@
-export function Card(props) {
-    return <div style={{border: "1px solid #b2bec3", borderRadius: 10, padding: 20, margin: 20, cursor: "pointer"}}>
+import { useDrag } from 'react-dnd'
+
+
+export function Card(title, description) {
+    const [{opacity0}, dragRef] = useDrag(
+        () => ({
+            type: "card",
+            item: {title, description},
+            collect: (moniter) => ({
+                opacity: moniter.isDragging() ? 0.5 : 1
+            })
+        })
+    )
+    return <div ref={dragRef} style={{opacity0, border: "1px solid #b2bec3", borderRadius: 10, padding: 20, margin: 20, cursor: "pointer"}}>
         <div style={{margin: 10}}>
-            {props.title}
+            {title} 
         </div>
         <div style={{height: 1, width: "100%", background: "black"}}></div>
         <div style={{margin: 10}}>
-            {props.description} 
+            {description} 
         </div>
     </div>
 }
